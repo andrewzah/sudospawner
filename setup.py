@@ -11,8 +11,8 @@ import os
 import sys
 
 v = sys.version_info
-if v[:2] < (3, 3):
-    error = "ERROR: Jupyter Hub requires Python version 3.3 or above."
+if v[:2] < (3, 11):
+    error = "ERROR: Jupyter Hub requires Python version 3.11 or above."
     print(error, file=sys.stderr)
     sys.exit(1)
 
@@ -73,7 +73,7 @@ setup_args = dict(
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
     ],
-    install_requires=["jupyterhub>=0.7", "notebook"],
+    install_requires=["jupyterhub>=1.1", "notebook"],
 )
 
 if __name__ == "__main__":
